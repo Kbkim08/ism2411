@@ -1,0 +1,87 @@
+print("--- Exercise 1: Build the list ---")
+
+inventory = ["pen", "notebook", "stapler", "tape", "marker"]
+print(inventory)
+print(len(inventory))
+
+print("--- Exercise 2: Index Practice ---")
+
+print(inventory[0]) # First Item
+print(inventory[-1]) # Last item
+middle = len(inventory) // 2
+print(inventory(middle)) # Middle Item
+
+
+print("--- Exercise 3: Slicing Practice ---")
+print(inventory[:3]) # First 3 items
+print(inventory[-2:]) # Last 2 items
+print(inventory[::2]) # Every 2nd Item
+
+print("--- Exercise 4: Modifying the list ---")
+
+inventory.append("envelope")
+inventory.append("tape")
+print(inventory) # ADDS ENVELOPE TO LIST
+
+inventory.remove("tape")
+print(inventory)
+
+inventory.sort()
+print(inventory)
+
+print("--- Exercise 5: Tuple Comparison ---")
+
+coords = (40.7128,-74.0060)
+
+try:
+    coords[0] = 99
+except TypeError as error:
+    print("TypeError caught:", error)
+    print("Tuples protect coordinates: a location should never change by accident.")
+
+print(coords)
+
+
+print("--- Exercise 6: Average List of Sales ---")
+sales = [100, 250, 75, 480, 200]
+total = sum(sales)
+count = len(sales)
+average = total / count
+
+print(f"total: {total}")
+print(f"Count: {count}")
+print(f"average {average}")
+print(f"Best: {max(sales)}")
+print(f"Worst: {min(sales)}")
+
+
+print("--- Exercise 7: Accumulator pattern ---")
+
+prices = [9.99, 14.99, 4.99, 24.99, 1.99]
+discount = []
+for price in prices:
+    discount.append(round(price * .9, 2))
+
+print("Original prices:", prices)
+print("Discounts:", discount)
+
+print("--- Exercise 8: Filter above a threshold ---")
+sales = [340,127,589,204,467,88,731,315,62,490]
+
+high_sales = []
+for amount in sales:
+    if amount > 300:
+        high_sales.append(amount)
+
+print("High sales:", high_sales)
+print(f"Count: {len(high_sales)}")
+print(f"average: {sum(high_sales) / len(high_sales):.2f}")
+
+# --- Reflection ---
+# What surprises me about lists is how flexible they are. They can
+# hold many kinds of data types and can be modified very easily.
+
+# Maybe I can save time using lists by organizing things more. 
+# Even better, it will be neater for organization. Maybe in an internship
+# I can use data from Excel and utilitze to update the updates
+# Automatically with code.
